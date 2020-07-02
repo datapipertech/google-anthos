@@ -18,13 +18,13 @@ variable "project_name" {
 
 variable "create_project" {
   description = "if true create the packet project, if not skip and use the provided project"
-  default     = false
+  default     = true
   type        = bool
 }
 
 variable "project_id" {
   description = "Packet Project ID to use in case create_project is false"
-  default     = "d3ce96f4-fb4f-44fa-a62d-c7b69c232188"
+  default     = ""
 }
 
 /*
@@ -93,15 +93,15 @@ variable "esxi_hostname" {
 }
 
 variable "router_size" {
-  default = "c2.medium.x86"
+  default = "c3.medium.x86"
 }
 
 variable "esxi_size" {
-  default = "c2.medium.x86"
+  default = "c3.medium.x86"
 }
 
 variable "facility" {
-  default = "dfw2"
+  default = "sjc1"
 }
 
 variable "router_os" {
@@ -109,7 +109,7 @@ variable "router_os" {
 }
 
 variable "vmware_os" {
-  default = "vmware_esxi_6_5"
+  default = "vmware_esxi_6_7"
 }
 
 variable "billing_cycle" {
@@ -125,7 +125,7 @@ variable "vcenter_portgroup_name" {
 }
 
 variable "domain_name" {
-  default = "lg-lab.local"
+  default = "packet.local"
 }
 
 variable "vpn_user" {

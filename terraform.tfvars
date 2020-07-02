@@ -1,0 +1,5 @@
+organization_id = "ece99276-ef77-4dc7-8a3e-2255d25a4334"
+project_name = "on-prem-1"
+anthos_gcp_project_id = "anthos-zeppelin-mask-f868"
+anthos_version = "1.4.0-gke.13"
+# anthos_deploy_clusters = "False"
