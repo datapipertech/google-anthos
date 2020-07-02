@@ -8,22 +8,23 @@ variable "auth_token" {
 }
 
 variable "organization_id" {
+  default = "ece99276-ef77-4dc7-8a3e-2255d25a4334"
 }
 
 variable "project_name" {
-  default = "anthos-on-packet-1"
+  default = "on-prem-1"
 }
 
 
 variable "create_project" {
   description = "if true create the packet project, if not skip and use the provided project"
-  default     = true
+  default     = false
   type        = bool
 }
 
 variable "project_id" {
   description = "Packet Project ID to use in case create_project is false"
-  default     = "null"
+  default     = "d3ce96f4-fb4f-44fa-a62d-c7b69c232188"
 }
 
 /*
@@ -124,7 +125,7 @@ variable "vcenter_portgroup_name" {
 }
 
 variable "domain_name" {
-  default = "packet.local"
+  default = "lg-lab.local"
 }
 
 variable "vpn_user" {
@@ -136,11 +137,11 @@ variable "vcenter_datacenter_name" {
 }
 
 variable "vcenter_cluster_name" {
-  default = "Packet-1"
+  default = "lg-lab-anthos-1"
 }
 
 variable "gcs_bucket_name" {
-  default = "vmware"
+  default = "ldp-packet-anthos-gcs"
 }
 
 variable "s3_url" {
@@ -164,6 +165,7 @@ variable "s3_boolean" {
 }
 
 variable "vcenter_iso_name" {
+  default = "VMware-VCSA-all-6.7.0-15132721.iso"
 }
 
 variable "storage_reader_key_name" {
@@ -185,4 +187,3 @@ variable "register_key_name" {
 variable "stackdriver_key_name" {
   default = "stackdriver-key.json"
 }
-
